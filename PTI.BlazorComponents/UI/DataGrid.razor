@@ -1,0 +1,59 @@
+﻿@if (!String.IsNullOrWhiteSpace(this.GridTitle) && this.DisplayGridTitle == true)
+{
+    <h3>@GridTitle</h3>
+}
+@if (this.ShouldRenderGrid)
+{
+    <div class="container">
+        <div class="row @GridHeaderCssClass">
+            @if (this.Columns != null)
+            {
+                @foreach (var singleColumn in this.Columns)
+                {
+                    <div class="col">
+                        @singleColumn.Name
+                    </div>
+                }
+            }
+            else
+            {
+                @UserDefinedColumns
+            }
+        </div>
+        @if (this.PageItems != null)
+        {
+            @foreach (var singleDataItem in this.PageItems)
+            {
+                <div class="row PTI-DataGrid-Row">
+                    @if (this.Columns != null)
+                    {
+                        @foreach (var singleColumn in this.Columns)
+                        {
+                            <div class="col">
+                                @RenderProperty(singleDataItem, singleColumn)
+                            </div>
+                        }
+                    }
+                </div>
+            }
+            <div class="row">
+                <div class="col">
+                    Current Page: @(CurrentPage + 1)
+                    Pages: @TotalPages
+                </div>
+                <div class="col">
+                    @if (CurrentPage > 0)
+                    {
+                        <button type="button" class="@GridPagingButtonsCssClass" @onclick="PreviousPage"> Previous Page</button>
+                    }
+                </div>
+                <div class="col">
+                    @if (CurrentPage < (TotalPages - 1))
+                    {
+                        <button type="button" class="@GridPagingButtonsCssClass" @onclick="NextPage"> Next Page</button>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
