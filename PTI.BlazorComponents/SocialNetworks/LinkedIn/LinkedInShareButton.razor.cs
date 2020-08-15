@@ -5,10 +5,12 @@ namespace PTI.BlazorComponents.SocialNetworks.LinkedIn
 {
     public partial class LinkedInShareButton
     {
+        private bool BlockRender { get; set; } = false;
         [Parameter]
         public bool AddPlatformScript { get; set; } = false;
         [Parameter]
         public string UrlToShare { get; set; } = "https://www.linkedin.com";
+
         public RenderFragment RenderButton()
         {
             RenderFragment form = b =>

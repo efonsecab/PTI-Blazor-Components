@@ -25,7 +25,4 @@
     <Folder Include="SocialNetworks\LinkedIn\" />
     <Folder Include="SocialNetworks\Twitter\" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Remove="SocialNetworks\LinkedIn\LinkedInShareButton.razor" />
-  </ItemGroup>
 </Project>
