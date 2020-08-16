@@ -11,6 +11,14 @@ namespace PTI.BlazorComponents.SocialNetworks.LinkedIn
         [Parameter]
         public string UrlToShare { get; set; } = "https://www.linkedin.com";
 
+        public RenderFragment ButtonsContent
+        {
+            get
+            {
+                return this.RenderButton();
+            }
+        }
+
         public RenderFragment RenderButton()
         {
             RenderFragment form = b =>
