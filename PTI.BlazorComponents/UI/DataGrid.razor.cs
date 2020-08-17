@@ -9,7 +9,7 @@ namespace PTI.BlazorComponents.UI
     /// <summary>
     /// NOTE: This Grid is not finished yet. I'm figuring out the best way to solve how to build it
     /// </summary>
-    public sealed partial class DataGrid
+    public partial class DataGrid<TItem>
     {
         [Parameter]
         public RenderFragment ChildContent { get; set; }
@@ -22,7 +22,7 @@ namespace PTI.BlazorComponents.UI
         [Parameter]
         public bool AutogenerateColumns { get; set; } = true;
         [Parameter]
-        public IQueryable<object> DataItems { get; set; }
+        public IQueryable<TItem> DataItems { get; set; }
         private bool ShouldRenderGrid { get; set; } = false;
         [Parameter]
         public string GridHeaderCssClass { get; set; } = "PTI-DataGrid-Header";
@@ -39,6 +39,7 @@ namespace PTI.BlazorComponents.UI
         private int CurrentRowIndex = 0;
         [Parameter]
         public int PageSize { get; set; } = 10;
+        //public TItem GH { get; set; }
         public int TotalPages
         {
             get
@@ -61,7 +62,7 @@ namespace PTI.BlazorComponents.UI
             });
         }
 
-        private IQueryable<object> PageItems
+        private IQueryable<TItem> PageItems
         {
             get
             {

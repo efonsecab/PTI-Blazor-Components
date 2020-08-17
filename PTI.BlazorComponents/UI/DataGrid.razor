@@ -1,4 +1,6 @@
-﻿@if (!String.IsNullOrWhiteSpace(this.GridTitle) && this.DisplayGridTitle == true)
+﻿@namespace PTI.BlazorComponents.UI
+@typeparam TItem
+@if (!String.IsNullOrWhiteSpace(this.GridTitle) && this.DisplayGridTitle == true)
 {
     <h3>@GridTitle</h3>
 }

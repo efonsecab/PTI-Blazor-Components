@@ -3,14 +3,14 @@
 
 <DataGrid GridTitle="This is a test" DataItems="PersonsList"
           AutogenerateColumns="false"
-          DisplayGridTitle="true">
-    <UserDefinedColumns Context="tst">
+          DisplayGridTitle="true" TItem="Person">
+    <UserDefinedColumns Context="ctx">
         <DataGridColumn Name="Age" Caption="Person Age">
-            @tst.Caption
+            @ctx.Caption
         </DataGridColumn>
         <DataGridColumn Name="Name" Caption="Person Name">
             <strong>
-                @tst.Caption
+                @ctx.Caption
             </strong>
         </DataGridColumn>
         <DataGridColumn Name="LastName" Caption="Person Last Name"></DataGridColumn>
@@ -26,12 +26,12 @@
         public int Age { get; set; }
     }
 
-    private IQueryable<object> PersonsList { get; set; }
+    private IQueryable<Person> PersonsList { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         Random rnd = new Random();
-        List<object> persons = new List<object>();
+        List<Person> persons = new List<Person>();
         persons.Add(new Person()
         {
             Name = "Jill",
