@@ -1,7 +1,16 @@
 ﻿@page "/"
+@using PTI.BlazorComponents.Payments.Paypal
+@inject IJSRuntime jsRuntime
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+@code{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await jsRuntime.InvokeVoidAsync("exampleJsFunctions.showPrompt", "hola");
+    }
+}
