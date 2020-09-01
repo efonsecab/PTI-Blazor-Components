@@ -1,4 +1,16 @@
-﻿<div id="container">
+﻿<div class="container">
+    @if (this.IsLoading)
+    {
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    }
+    @if (this.AddPlatformScript)
+    {
+        @RenderPaypalSdk
+    }
     <span>@PlanName</span>
     <div id="@ContainerId"></div>
 </div>

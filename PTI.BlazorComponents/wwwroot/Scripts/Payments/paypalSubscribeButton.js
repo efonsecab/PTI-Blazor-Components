@@ -15,11 +15,7 @@
         },
         onApprove: function (data, actions)
         {
-            debugger;
             DotNet.invokeMethodAsync(onApproveFunctionAssembly, onApproveFunctionName, data, actions);
         }
-        //onApprove: function (data, actions) {
-        //    alert(data.subscriptionID);
-        //}
     }).render(elementId);
 }
