@@ -28,7 +28,7 @@
 
     private IQueryable<Person> PersonsList { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         Random rnd = new Random();
         List<Person> persons = new List<Person>();

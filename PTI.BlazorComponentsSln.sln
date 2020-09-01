@@ -1,15 +1,16 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTI.BlazorComponents.Tests", "PTI.BlazorComponents.Tests\PTI.BlazorComponents.Tests.csproj", "{9C5EF4AC-F060-497A-BEB5-2E2E58BD6789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTI.BlazorComponentsWeb.Server", "PTI.BlazorComponentsWeb\Server\PTI.BlazorComponentsWeb.Server.csproj", "{E83E02A3-43A3-4521-8EA3-8450B0992370}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PTI.BlazorComponentsWeb.Server", "PTI.BlazorComponentsWeb\Server\PTI.BlazorComponentsWeb.Server.csproj", "{E83E02A3-43A3-4521-8EA3-8450B0992370}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTI.BlazorComponentsWeb.Client", "PTI.BlazorComponentsWeb\Client\PTI.BlazorComponentsWeb.Client.csproj", "{A1D41CB4-54F0-4978-9E83-DD000BE18E7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PTI.BlazorComponentsWeb.Client", "PTI.BlazorComponentsWeb\Client\PTI.BlazorComponentsWeb.Client.csproj", "{A1D41CB4-54F0-4978-9E83-DD000BE18E7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTI.BlazorComponentsWeb.Shared", "PTI.BlazorComponentsWeb\Shared\PTI.BlazorComponentsWeb.Shared.csproj", "{E450AB93-8CBD-425F-B88C-9B519302F7E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PTI.BlazorComponentsWeb.Shared", "PTI.BlazorComponentsWeb\Shared\PTI.BlazorComponentsWeb.Shared.csproj", "{E450AB93-8CBD-425F-B88C-9B519302F7E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTI.BlazorComponents", "PTI.BlazorComponents\PTI.BlazorComponents.csproj", "{5FB022C6-9B58-4D28-AE09-0835E17051DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PTI.BlazorComponents", "PTI.BlazorComponents\PTI.BlazorComponents.csproj", "{5FB022C6-9B58-4D28-AE09-0835E17051DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,5 +38,11 @@ Global
 		{5FB022C6-9B58-4D28-AE09-0835E17051DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FB022C6-9B58-4D28-AE09-0835E17051DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FB022C6-9B58-4D28-AE09-0835E17051DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D115A71-7160-443F-A4EF-5E94F9CEC859}
 	EndGlobalSection
 EndGlobal

@@ -13,13 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\PTI.BlazorComponents\PTI.BlazorComponents.csproj" />
     <ProjectReference Include="..\Shared\PTI.BlazorComponentsWeb.Shared.csproj" />
-    <ProjectReference Include="..\..\PTI.BlazorComponents\PTI.BlazorComponents.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\Samples\" />
   </ItemGroup>
 </Project>
