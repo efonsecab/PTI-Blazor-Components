@@ -20,11 +20,14 @@ namespace PTI.BlazorComponents.Payments.Paypal
         [Parameter]
         public string ContainerId { get; set; } = "paypal-button-container";
         [Parameter]
-        public string OnApproveJsFunction { get; set; }
+        public string OnApproveFunctionAssembly { get; set; }
+        [Parameter]
+        public string OnApproveFunctionName { get; set; }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            object[] parameters= {$"#{this.ContainerId}", this.PlanId, OnApproveJsFunction };
+            object[] parameters= {$"#{this.ContainerId}", this.PlanId,
+                OnApproveFunctionAssembly, OnApproveFunctionName };
             await this.jsRuntime.InvokeVoidAsync("RenderPaypalButton", parameters);
         }
     }

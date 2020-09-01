@@ -1,4 +1,4 @@
-﻿function RenderPaypalButton(elementId, planId, onApproveFunction) {
+﻿function RenderPaypalButton(elementId, planId, onApproveFunctionAssembly, onApproveFunctionName) {
     debugger;
     paypal.Buttons({
         style: {
@@ -13,7 +13,11 @@
                 'plan_id': planId
             });
         },
-        onApprove: window[onApproveFunction]
+        onApprove: function (data, actions)
+        {
+            debugger;
+            DotNet.invokeMethodAsync(onApproveFunctionAssembly, onApproveFunctionName, data, actions);
+        }
         //onApprove: function (data, actions) {
         //    alert(data.subscriptionID);
         //}
